@@ -1,0 +1,13 @@
+.textBoxStyle {
+    border: rgb(1, 31, 1);
+    border-style: solid;
+    height: 3rem;
+    background-color: lemonchiffon;
+    font-size: 2rem;
+}
+
+label {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
