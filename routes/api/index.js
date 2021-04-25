@@ -1,7 +1,6 @@
 const router = require("express").Router();
-// const messageRoutes = require("./message");
+const songRoutes = require("./songSpotify");
 
-// message routes
-// router.use("/message", messageRoutes);
+router.use("/songSpotify", songRoutes);
 
 module.exports = router;

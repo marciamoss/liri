@@ -21,9 +21,9 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "concurrently": "^3.6.1",
+        "concurrently": "^4.1.2",
         "dotenv": "^6.2.0",
-        "nodemon": "^1.11.0",
+        "nodemon": "^1.19.4",
         "prettier": "^1.17.0"
     },
     "dependencies": {
@@ -32,6 +32,7 @@
         "express-session": "^1.15.6",
         "if-env": "^1.0.4",
         "moment": "^2.29.1",
+        "mongoose": "^5.12.5",
         "node-spotify-api": "^1.1.1"
     }
 }
