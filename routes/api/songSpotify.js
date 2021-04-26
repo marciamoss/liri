@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const fetchSongController = require("../../controllers/fetchSongController");
 
-router.route("/")
-  .post(fetchSongController.getSong);
+router.route("/:id")
+  .get(fetchSongController.getSong);
 
 
 module.exports = router;

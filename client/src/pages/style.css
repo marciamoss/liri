@@ -15,7 +15,15 @@ label {
     font-style: italic;
 }
 
-.btn-primary {
-    background-color: #000000;
+.btn {
+    background-color: rgb(17, 3, 1);
     font-weight: bold;
+}
+
+.songList {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    text-align: center;
 }

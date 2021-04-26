@@ -1,8 +1,5 @@
 body {
-  background-color: #c0c2be;
-  opacity: 0.4;
-  background-image: radial-gradient(circle at center center, #efefef, #e0f9d1), repeating-radial-gradient(circle at center center, #efefef, #efefef, 40px, transparent 80px, transparent 40px);
-  background-blend-mode: multiply;
+  background: linear-gradient(90deg, rgba(183, 218, 240, 1), rgba(71, 255, 83, 0.34));
 }
 
 code {
