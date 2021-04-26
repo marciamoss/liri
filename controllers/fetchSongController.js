@@ -1,12 +1,6 @@
 const db = require("../models");
 require("dotenv").config();
-// let keys = require("../keys.js");
-let keys = {  
-  spotify: {
-    id: "process.env.SPOTIFY_ID",
-    secret: "process.env.SPOTIFY_SECRET"
-  }
-};
+let keys = require("../keys.js");
 let Spotify = require('node-spotify-api');
 let spotify = new Spotify(keys.spotify);
 

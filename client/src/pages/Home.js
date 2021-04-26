@@ -28,7 +28,11 @@ class Home extends Component {
         if(result.data.error){
           this.setState({apiError: true});
         }
-        else if (result.data.length === 0) {
+        else {
+          this.setState({apiError: false});
+        }
+
+        if (result.data.length === 0) {
           result.data = ["noSongsWereFetched"]
         }
         this.setState({spotifySongList: result.data});
