@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { List, ListItem } from "../components/List";
 import API from "../utils/API";
 import "./style.css";
+import PopUps from "../components/PopUps";
 
 class Home extends Component {
   constructor() {
@@ -10,6 +11,13 @@ class Home extends Component {
       song: "",
       spotifySongList: [],
       apiError: false,
+      show: false,
+      handleClose() {
+      this.setState({ show: false });
+      },
+      handleShow() {
+      this.setState({ show: true });
+      }
     };
   }
 
@@ -26,7 +34,8 @@ class Home extends Component {
     API.fetchSong(song)
       .then((result) => {
         if(result.data.error){
-          this.setState({apiError: true});
+          let handleCloseCopy = this.state.handleClose.bind(this);
+          this.setState({apiError: true, show:true, handleClose: handleCloseCopy});
         }
         else {
           this.setState({apiError: false});
@@ -38,7 +47,8 @@ class Home extends Component {
         this.setState({spotifySongList: result.data});
       })
       .catch(error => {
-        this.setState({apiError: true});
+        let handleCloseCopy = this.state.handleClose.bind(this);
+        this.setState({apiError: true, show:true, handleClose: handleCloseCopy});
       });
   }
 
@@ -46,6 +56,8 @@ class Home extends Component {
     return (
         <div className="container">
             <form className="mt-5">
+              <PopUps show={this.state.show} handleClose={this.state.handleClose}>
+              </PopUps>
               <div className="row">
                 <div className="col-12">
                   <label>Type in a song to search Spotify</label>
@@ -103,17 +115,6 @@ class Home extends Component {
                   </div>
                 </div>
                 
-              ):(
-                null
-              )}
-              {/* if api call fails  */}
-              {this.state.apiError ? 
-              (
-              <div className = "row mt-2">
-                  <div className = "col-6">
-                    <h3 style = {{backgroundColor: "red", color: "yellow", fontWeight:"bold"}}>Call to spotify failed, please check the network connection and make sure you have the spotify api keys set up and added to .env file in the root folder</h3>
-                  </div>
-                </div>
               ):(
                 null
               )}
