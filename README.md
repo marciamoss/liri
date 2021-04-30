@@ -1,6 +1,9 @@
 * liri
 
-* To run this app you need to install the following:
+** App Link: https://fathomless-lowlands-26190.herokuapp.com/ **
+
+Below are the instruction if you want to clone and run the repo on your computer:
+* To run this app on locally you need to install the following:
 * Once you have the github repo cloned in git bash run command 'npm i' without the quotes. 
   That will install all the packages required to run the app.
   
